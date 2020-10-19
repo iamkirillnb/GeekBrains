@@ -1,0 +1,4 @@
+﻿Misha 50000
+Daria 15000
+Maxim 19000
+Dima 67000
