@@ -2,7 +2,7 @@
 1. Реализовать класс Matrix (матрица). Обеспечить перегрузку конструктора класса (метод __init__()),
 который должен принимать данные (список списков) для формирования матрицы.
 '''
-
+from random import randint
 class Matrix:
     def __init__(self, lists):
         self.lists = lists
@@ -17,8 +17,8 @@ class Matrix:
         return self.__str__()
 
 
-example1 = [[1, 2, 3], [5, 3, 2], [9, 0, 6]]
-example2 = [[5, 3, 1], [2, 1, 5], [7, 5, 2]]
+example1 = [[randint(1, 6) for i in range(3)] for j in range(3)]
+example2 = [[randint(1, 6) for i in range(3)] for j in range(3)]
 matrix1 = Matrix(example1)
 matrix2 = Matrix(example2)
 print(f'Первая матрица\n{matrix1}')
@@ -49,7 +49,7 @@ class Clothes(ABC):
     def summa(*args):
         cnt = 0
         for j in args:
-            cnt += j
+            cnt += j.coast
         return f'Общий расход ткани составляет {cnt}'
 
 
@@ -74,7 +74,7 @@ my_coat = Coat(180)
 my_suit = Suit(180)
 print(f'Расход ткани на пальто составляет {my_coat.coast}')
 print(f'Расход ткани на костюм составляет {my_suit.coast}')
-print(Clothes.summa(my_suit.coast, my_coat.coast))
+print(Clothes.summa(my_suit, my_coat))
 
 
 
