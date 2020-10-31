@@ -72,6 +72,8 @@ class Suit(Clothes):
 
 my_coat = Coat(180)
 my_suit = Suit(180)
+print(my_suit.coast)
+print(my_coat.coast)
 print(f'Расход ткани на пальто составляет {my_coat.coast}')
 print(f'Расход ткани на костюм составляет {my_suit.coast}')
 print(Clothes.summa(my_suit, my_coat))

@@ -100,6 +100,7 @@ Maxim.get_total_income()
 Выполните вызов методов и также покажите результат.
 '''
 
+
 class Car:
     def __init__(self, speed, color, name, is_police:bool):
         self.speed = speed
@@ -125,6 +126,7 @@ class Car:
         else:
             print(f'{self.name} не полицейская машина')
 
+
 class TownCar(Car):
     def __init__(self,  speed, color, name, is_police=False):
         super().__init__(speed=speed, color=color, name=name, is_police=is_police)
@@ -134,6 +136,7 @@ class TownCar(Car):
             print(f'{self.name} едет со скоростью {self.speed} км/ч - привышение скорости!\n\tЛимит 60 км/ч')
         else:
             print(f'{self.name} едет с допустимой скоростью до 60 км/ч')
+
 
 class SportCar(Car):
     def __init__(self,  speed, color, name, is_police=False):
